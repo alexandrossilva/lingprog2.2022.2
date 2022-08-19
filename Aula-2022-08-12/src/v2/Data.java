@@ -96,7 +96,7 @@ public class Data {
 			// diferença entre total de dias do mês e dia da data acrescida de 1 (um)
 			int diasRestantes = qtdDias[mes-1] - dia + 1;
 
-			// contibilização de total de dias dos meses subsequentes (até alcançar o mês de dezembro)
+			// contabilização de total de dias dos meses subsequentes (até alcançar o mês de dezembro)
 			for (int i = mes + 1; i <= 12; i++)
 				diasRestantes += qtdDias[i-1];	// acréscimo de total de dias do enésimo mês à diferença inicial 
 				
