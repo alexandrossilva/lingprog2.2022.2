@@ -38,40 +38,4 @@ public class ContaCorrente {
 		}
 	}
 	
-	public static void main(String[] args) {
-		char resp;
-		Scanner scanner = new Scanner(System.in);
-
-		// instanciação de objeto da classe ContaCorrente
-		ContaCorrente conta = new ContaCorrente();
-		
-		System.out.println("Saldo Inicial: " + conta.getSaldo());
-		System.out.println("\nOPERAÇÕES DE DEPÓSITO (D) OU SAQUE (S)");
-		
-		// operações de entrada e/ou saque
-		do {
-			// entrada de valor de saque e/ou depósito
-			System.out.print("\nValor de Depósito/Saque: ");
-			double v = scanner.nextDouble();
-			
-			// entrada de tipo de operação a realizar (saque ou depósito)
-			System.out.print("Tipo de Operação (D/S).: ");
-			char op = scanner.next().charAt(0);
-
-			if (op == 'D' || op == 'd')			// se operação for de depósito...
-				conta.registrarDeposito(v);
-			else if (op == 'S' || op == 's')	// se operação for de saque...
-				conta.registrarSaque(v);
-			
-			// listagem de saldo atualizado após operação de saque ou depósito
-			System.out.println("Saldo Atualizado.......: " + conta.getSaldo());
-			
-			// entrada para encerrar ou realizar nova operação de saque ou depósito
-			System.out.print("\nDeseja encerrar (S/N)? ");
-			resp = scanner.next().charAt(0);
-		} while (resp == 'N' || resp == 'n');
-		
-		scanner.close();
-	}
-	
 }
