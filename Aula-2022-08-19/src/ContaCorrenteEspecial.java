@@ -1,3 +1,4 @@
+// Especialização de contas correntes considerando tarifa de saque de 0,1%
 public class ContaCorrenteEspecial extends ContaCorrente {
 
 	// operação de saque com consequente atualização de saldo corrente da conta

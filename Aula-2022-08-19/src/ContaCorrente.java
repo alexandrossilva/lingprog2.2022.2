@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// Encapsulamento de operações típicas de contas correntes e considerando, além disso, 
+// particularidade de que tarifa de 0,5% é deduzida adicionamente em operações de saque
 public class ContaCorrente {
 
 	protected double saldo;			// saldo corrente da conta
@@ -38,6 +40,7 @@ public class ContaCorrente {
 		}
 	}
 	
+	// demonstração de capacidades da classe ContaCorrente
 	public static void main(String[] args) {
 		char resp;
 		Scanner scanner = new Scanner(System.in);

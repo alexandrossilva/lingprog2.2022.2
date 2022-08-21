@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Demonstração de capacidades da classe ContaCorrenteEspecial
 public class ContaCorrenteEspecialUtil {
 	
 	public static void main(String[] args) {
