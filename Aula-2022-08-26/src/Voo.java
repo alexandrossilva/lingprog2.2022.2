@@ -53,8 +53,11 @@ public class Voo {
 		// obtenção de quantidade de assentos livres
 		int assentosLivres = getTotalAssentosLivres();
 		
+		// obtenção de quantidade de assentos ocupados a partir de assentos livres
+		int assentosOcupados = assentos.length - assentosLivres;
+		
 		// cálculo e retorno de percentual de ocupação considerando capacidade de cada voo
-		return assentosLivres * 100.0 / assentos.length;
+		return assentosOcupados * 100.0 / assentos.length;
 	}
 
 	// reserva de assento com retorno de valor booleano de acordo com resultado da operação
@@ -69,5 +72,11 @@ public class Voo {
 			return true;					// retorno de true (reserva de assento efetivada)
 		}
 	}
+	
+	
+	
+	
+	
+	
 	
 }

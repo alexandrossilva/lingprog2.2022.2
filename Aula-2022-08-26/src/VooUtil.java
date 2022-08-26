@@ -7,9 +7,7 @@ public class VooUtil {
 		int op, n;
 		Scanner scanner = new Scanner(System.in);
 		
-		Voo v;
-		v = new Voo(1, new Date());
-		v.assentos[2] = false;
+		Voo v = new Voo(1, new Date());
 				
 		do {
 			System.out.println("******************** MENU ********************");
@@ -20,7 +18,7 @@ public class VooUtil {
 			System.out.println("* 5 - Encerrar                               *");
 			System.out.println("**********************************************");
 			
-			System.out.print("\nInforme Código Operação (1-4): ");
+			System.out.print("\nInforme Código Operação (1-5): ");
 			op = scanner.nextInt();
 			
 			switch(op) {
