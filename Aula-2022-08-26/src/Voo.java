@@ -3,7 +3,7 @@ import java.util.Date;
 // Encapsulamento de dados de voos e respectivas operações
 public class Voo {
 
-	public final static int TAM = 70;	// capacidade de assentos de cada voo
+	public final static int TAM = 5;	// capacidade de assentos de cada voo
 	
 	// array para indicação de situação de cada assento (livre, se true, ou ocupado, se false)
 	protected boolean[] assentos;
