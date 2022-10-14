@@ -33,7 +33,7 @@ public class ParUtil {
 		
 		// listagem de alunos com média superior à média geral
 		for (int i = 0; i < TAM; i++) {
-			if (alunos[i].getValor > mediaGeral) {		// se enésimo aluno com média superior...
+			if (alunos[i].getValor2() > mediaGeral) {		// se enésimo aluno com média superior...
 				System.out.println(alunos[i].getValor1());	// listagem de nome do aluno
 			}
 		}
