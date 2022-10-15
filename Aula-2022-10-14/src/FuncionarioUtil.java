@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -50,10 +51,59 @@ public class FuncionarioUtil {
 					scanner.nextLine();
 					break;
 				case 2:
+					if (listaFunc.isEmpty())
+						System.out.println("Não há funcionarios!");
+					else {
+						System.out.print("Nº Funcionário (1-" + listaFunc.size() + "): ");
+						int numFunc = scanner.nextInt();						
+						
+						if (numFunc <= 0 || numFunc > listaFunc.size())
+							System.out.println("Número de funcionário inválido!");
+						else {
+							func = listaFunc.get(numFunc - 1);							
+							
+							System.out.print("Horas trabalhadas: ");
+							int horas = scanner.nextInt();						
+							
+							func.adicionarCargaHoraria(horas);
+							
+							System.out.println("Banco de horas atualizado do funcionário: " + 
+							func.getHorasTrabalhadas());
+						}						
+					}
 					break;
 				case 3:
+					if (listaFunc.isEmpty())
+						System.out.println("Não há funcionarios!");
+					else {
+						Iterator<Funcionario> iterador = listaFunc.iterator();
+						
+						while (iterador.hasNext()) {
+							func = iterador.next();
+							System.out.println("Salário Líquido de " +
+									func.getNome() + ": " +
+									func.getSalarioLiquido());
+						}						
+					}					
 					break;
 				case 4:
+					if (listaFunc.isEmpty())
+						System.out.println("Não há funcionarios!");
+					else {
+						double soma = 0;
+						
+						Iterator<Funcionario> iterador = listaFunc.iterator();
+						
+						while (iterador.hasNext()) {
+							func = iterador.next();
+							soma += func.getSalarioLiquido();
+						}				
+						
+						double media = soma / listaFunc.size();
+						
+						System.out.println("Salário Líquido Médio: " +
+								media);
+					}					
 					break;
 			}
 			
